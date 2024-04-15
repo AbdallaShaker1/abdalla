@@ -1,0 +1,48 @@
+@media (max-width: 1921px) {
+  .about .about-me-paragraph {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1601px) {
+  .about .about-me-paragraph {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .projects .projects-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 10%;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1279px) {
+  .about-body-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8em;
+  }
+
+  .about .text-side {
+    text-align: center;
+  }
+
+  .main .img-side {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .projects .projects-card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 0.5fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10%;
+    justify-items: center;
+    align-items: center;
+  }
+}

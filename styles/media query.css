@@ -81,7 +81,7 @@
   .projects .projects-card-container {
     display: grid;
     grid-template-columns: repeat(1, 0.5fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 2fr;
     gap: 10%;
     justify-items: center;
     align-items: center;
@@ -104,6 +104,10 @@
     width: 100%;
   }
 
+  .button-group .primary-button {
+    border-width: 1px;
+  }
+
   .main {
     font-size: 8px;
   }
@@ -111,7 +115,7 @@
   .main .button-group a {
     padding: 2em 4em !important;
     font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .header.glass {

@@ -12,13 +12,13 @@ ol {
 }
 
 :root {
-  --black-color: #f9f9f9;
-  --white-color: #1f211f;
-  --white-background-color: #1f211f;
-  --paragraph-black-color: #cccccc;
-  --paragraph-white-color: #5c5b5a;
+  --white-color: #f9f9f9;
+  --black-color: #1f211f;
+  --black-background-color: #1f211f;
+  --paragraph-white-color: #cccccc;
+  --paragraph-black-color: #5c5b5a;
   --primary-color: #ff9e03;
-  --sun-color: linear-gradient(40deg, #8983f7, #a3dafb 70%);
+  --moon-color: linear-gradient(40deg, #8983f7, #a3dafb 70%);
 }
 
 .display-none {
@@ -53,7 +53,7 @@ ol {
 .section-header {
   text-align: center;
   font-weight: 600;
-  color: var(--black-color);
+  color: var(--white-color);
   margin-bottom: 2em;
 }
 

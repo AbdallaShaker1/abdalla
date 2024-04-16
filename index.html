@@ -155,7 +155,7 @@
           <div class="sun"></div>
         </div>
       </div>
-      <div class="hero-sun"></div>
+      <div class="hero-moon"></div>
     </main>
     <!-- END OF HERO SECTION -->
 
@@ -285,52 +285,66 @@
         <h2 class="section-header display-3">Contact</h2>
         <form action="#" id="form">
           <div class="inputs-container">
-            <div class="input-column">
-              <div class="input-group mb-5">
-                <input type="text" id="name" autocomplete="off" />
-                <label for="">Full Name</label>
-              </div>
+            <div class="input-group mb-5">
+              <input type="text" class="item" id="name" autocomplete="off" />
+              <label for="name">Full Name</label>
+              <p class="error-message mt-3">Full Name can't be blank</p>
+            </div>
 
-              <div class="input-group mb-5">
-                <input type="text" id="email" autocomplete="off" />
-                <label for="">Email Address</label>
-              </div>
+            <div class="input-group mb-5">
+              <input type="text" class="item" id="email" autocomplete="off" />
+              <label for="email">Email Address</label>
+              <p class="error-message email mt-3">
+                Email Address can't be blank
+              </p>
+            </div>
 
-              <div class="input-group mb-5">
-                <input type="text" id="phone" autocomplete="off" />
-                <label for="">Phone Number</label>
-              </div>
+            <div class="input-group mb-5">
+              <input type="text" class="item" id="phone" autocomplete="off" />
+              <label for="phone">Phone Number</label>
+              <p class="error-message mt-3">Phone Number Can't be blank</p>
+            </div>
 
+            <div class="input-group mb-5">
+              <textarea
+                name=""
+                class="item"
+                type="text"
+                id="message"
+                autocomplete="off"
+              ></textarea>
+              <label for="message">Your Message</label>
+              <p class="error-message mt-3">Message can't be blank</p>
+            </div>
+
+            <div class="input-group">
               <div class="button-group">
                 <button class="primary-button" type="submit">
                   Send Message
                 </button>
               </div>
             </div>
-
-            <div class="input-column">
-              <div class="input-group mb-5">
-                <textarea
-                  name=""
-                  type="text"
-                  id="message"
-                  autocomplete="off"
-                ></textarea>
-                <label for="">Your Message</label>
-              </div>
+          </div>
+          <div class="message">
+            <div class="success hidden" id="success">
+              <p>Message Sent Successfully</p>
+            </div>
+            <div class="failure hidden" id="failure">
+              <p>Error</p>
             </div>
           </div>
         </form>
-        <div class="message">
-          <div class="success hidden" id="success">
-            <p>Message Sent Successfully</p>
-          </div>
-          <div class="failure hidden" id="failure">
-            <p>Error</p>
-          </div>
-        </div>
       </section>
       <!-- END OF CONTACT SECTION -->
+
+      <!-- FOOTER SECTION -->
+      <footer class="footer">
+        <p class="copyright">Copyright © 2024 All rights reserved</p>
+        <p>
+          developed by <a href="#home" class="primary-name">Abdullah Shaker</a>
+        </p>
+      </footer>
+      <!-- END OF FOOTER SECTION -->
     </div>
     <!-- bootstrap script -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>

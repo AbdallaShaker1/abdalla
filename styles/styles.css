@@ -1030,6 +1030,7 @@ body {
   border: 1.2px solid var(--white-color);
   outline: none;
   border-radius: 5px;
+  cursor: none;
 }
 
 .input-group input {
@@ -1121,6 +1122,11 @@ body {
 .footer a:hover,
 .footer a:active {
   text-decoration: underline;
+  cursor: none;
+}
+
+a {
+  cursor: none !important;
 }
 /* END OF FOOTER SECTION */
 

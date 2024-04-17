@@ -215,6 +215,7 @@ gsap.ticker.lagSmoothing(0);
 
 const entries = document.querySelectorAll(".entries");
 
+// The scroll animation
 entries.forEach((entry) => {
   const entryMedia = entry.querySelector(".entry-media");
   const entryMeta = entry.querySelector(".entry-meta");

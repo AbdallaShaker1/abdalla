@@ -53,10 +53,25 @@
   }
 }
 
+@keyframes hidden-to-visible {
+  from {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .going-out {
   animation: slide-out-to-right 1s ease-in-out !important;
 }
 
 .going-in {
   animation: slide-in-from-right 1s ease-in-out !important;
+}
+
+.going-visible {
+  animation: hidden-to-visible 0.5s ease-in-out;
 }

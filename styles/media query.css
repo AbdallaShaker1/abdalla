@@ -98,6 +98,7 @@
     left: 0;
     border-radius: unset;
     width: 150px;
+    padding: 1em 0;
   }
 
   .header.opened {
@@ -106,6 +107,14 @@
 
   .button-group .primary-button {
     border-width: 1px;
+  }
+
+  .custom-container {
+    width: 100%;
+  }
+
+  .about .image-side {
+    width: 80%;
   }
 
   .main {
@@ -125,6 +134,21 @@
   ol,
   ul {
     padding: 0;
+  }
+
+  .projects .project-card {
+    text-align: center;
+    width: 110%;
+  }
+
+  .projects .project-card .text-under-image .text-container {
+    width: 90%;
+    align-items: center;
+  }
+
+  .projects .project-card .text-under-image .text-container h2 {
+    width: 80%;
+    text-align: center;
   }
 }
 

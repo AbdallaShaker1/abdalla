@@ -32,7 +32,7 @@ burgerIcon.addEventListener("click", () => {
 // Changing the page colors on click of the color change button
 changeThePageColor.addEventListener("click", () => {
   if (COUNTER == 1) {
-    // Set the color variables to dark theme colors
+    // Set the color variables to light theme colors
     // You can change the color values here
     root.style.setProperty("--black-background-color", "#fff2d8");
     root.style.setProperty("--white-color", "#1f211f");
@@ -40,12 +40,12 @@ changeThePageColor.addEventListener("click", () => {
     root.style.setProperty("--paragraph-white-color", "#5c5b5a");
     root.style.setProperty("--paragraph-black-color", "#cccccc");
     root.style.setProperty(
-      "--sun-color",
+      "--moon-color",
       "linear-gradient(40deg, #ff0080, #ff8c00 70%)"
     );
     COUNTER = 0;
   } else if (COUNTER == 0) {
-    // Set the color variables to light theme colors
+    // Set the color variables to dark theme colors
     // You can change the color values here
     root.style.setProperty("--black-background-color", "#1f211f");
     root.style.setProperty("--white-color", "#f9f9f9");
@@ -173,4 +173,70 @@ form.addEventListener("submit", (e) => {
     form.reset();
     return false;
   }
+});
+
+// Changing the page color to the light theme for the mobile version
+if (window.innerWidth < 1000) {
+  root.style.setProperty("--black-background-color", "#fff2d8");
+  root.style.setProperty("--white-color", "#1f211f");
+  root.style.setProperty("--black-color", "#f9f9f9");
+  root.style.setProperty("--paragraph-white-color", "#5c5b5a");
+  root.style.setProperty("--paragraph-black-color", "#cccccc");
+  root.style.setProperty(
+    "--moon-color",
+    "linear-gradient(40deg, #ff0080, #ff8c00 70%)"
+  );
+  COUNTER = 0;
+}
+
+// A Typing effect for my job
+
+const typed = new Typed(".multiple-text", {
+  strings: ["Front-end Developer", "UI/UX Designer"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
+});
+
+// ANOTHER SCROLL ANIMATION FROM OUTSIDE I WILL RENAME THE COMMENTS LATER
+
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {});
+
+lenis.on("scroll", ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
+
+const entries = document.querySelectorAll(".entries");
+
+entries.forEach((entry) => {
+  const entryMedia = entry.querySelector(".entry-media");
+  const entryMeta = entry.querySelector(".entry-meta");
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: entry,
+      start: "top bottom",
+      end: "bottom 90%",
+      scrub: true,
+    },
+  });
+
+  tl.fromTo(
+    entryMedia,
+    { xPercent: -100, opacity: 0 },
+    { xPercent: 0, opacity: 1 }
+  );
+  tl.fromTo(
+    entryMeta,
+    { xPercent: 100, opacity: 0 },
+    { xPercent: 0, opacity: 1 },
+    "<"
+  );
 });

@@ -67,6 +67,11 @@
     height: 200px;
     padding: 1em;
   }
+
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+  }
 }
 
 @media (max-width: 1000px) {

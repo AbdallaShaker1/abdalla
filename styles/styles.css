@@ -3,6 +3,30 @@ body {
   color: var(--white-color);
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
     -webkit-text-stroke-color 0.5s ease-in-out;
+  cursor: none;
+}
+
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: var(--primary-color);
+}
+
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--primary-color);
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .header {
@@ -33,10 +57,6 @@ body {
   box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(20px);
   border-radius: 20px;
-}
-
-.burger-icon {
-  cursor: pointer;
 }
 
 .burger-icon span {
@@ -90,6 +110,7 @@ body {
   font-size: 1.1em;
   font-weight: 600;
   transition: color 0.3s ease-in-out;
+  cursor: none;
 }
 
 .nav-container ul li a:hover,
@@ -137,7 +158,6 @@ body {
   position: relative;
   /* overflow: hidden; */
   border-radius: 7px;
-  cursor: pointer;
   transition: all 0.3s;
 }
 
@@ -189,7 +209,6 @@ body {
   position: relative;
   /* overflow: hidden; */
   border-radius: 7px;
-  cursor: pointer;
   transition: all 0.3s;
 }
 
@@ -231,7 +250,6 @@ body {
 }
 
 .change-the-page-color {
-  cursor: pointer;
   position: fixed;
   bottom: 5%;
   right: 5%;
@@ -249,6 +267,7 @@ body {
 
 .credit a {
   color: inherit;
+  cursor: none;
 }
 
 /* Main Circle */
@@ -377,6 +396,7 @@ body {
 .toggle {
   height: 2.8rem;
   border-radius: 100px;
+  cursor: none;
 }
 
 .change-the-page-color label {
@@ -385,7 +405,6 @@ body {
   border-radius: 100px;
   position: relative;
   margin: 1.8rem 0 4rem 0;
-  cursor: pointer;
 }
 
 .toggle {
@@ -570,6 +589,7 @@ body {
   border: unset;
   color: var(--white-color);
   text-decoration: none;
+  cursor: none;
 }
 
 .button-group .primary-button {
@@ -579,6 +599,7 @@ body {
   color: var(--black-color);
   isolation: isolate;
   position: relative !important;
+  cursor: none;
 }
 
 .button-group .primary-button::before {
@@ -1124,4 +1145,12 @@ html.lenis body {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+/* CURSOR REMOVER */
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: none;
 }

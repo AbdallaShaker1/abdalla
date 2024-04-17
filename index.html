@@ -17,6 +17,8 @@
     <title>Abdullah portfolio</title>
   </head>
   <body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
     <!-- header section -->
     <header
       class="position-fixed header d-flex align-items-center glass"
@@ -30,15 +32,34 @@
         </div>
         <nav class="nav-container" id="nav-container">
           <ul class="d-flex" id="un-ordered-list">
-            <li class="on-section"><a href="#home" id="home-link">Home</a></li>
-            <li>
-              <a href="#about" id="about-link">About</a>
+            <li class="on-section">
+              <a href="#home" id="home-link" onclick="lenis.scrollTo('#home');"
+                >Home</a
+              >
             </li>
             <li>
-              <a href="#projects" id="projects-link">Projects</a>
+              <a
+                href="#about"
+                id="about-link"
+                onclick="lenis.scrollTo('#about');"
+                >About</a
+              >
             </li>
             <li>
-              <a href="#contact" id="contact-link">Contact</a>
+              <a
+                href="#projects"
+                id="projects-link"
+                onclick="lenis.scrollTo('#projects');"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                id="contact-link"
+                onclick="lenis.scrollTo('#contact');"
+                >Contact</a
+              >
             </li>
           </ul>
         </nav>
@@ -135,8 +156,18 @@
           <span class="multiple-text"></span>
         </p>
         <div class="button-group d-flex gap-4 going-visible">
-          <a class="primary-button" href="#contact">Contact</a>
-          <a class="secondary-button" href="#projects">View Project</a>
+          <a
+            class="primary-button"
+            href="#contact"
+            onclick="lenis.scrollTo('#contact');"
+            >Contact</a
+          >
+          <a
+            class="secondary-button"
+            href="#projects"
+            onclick="lenis.scrollTo('#projects');"
+            >View Project</a
+          >
         </div>
       </div>
       <div class="img-side position-fixed display-none" id="image-side">
@@ -197,7 +228,12 @@
             </p>
 
             <div class="button-group">
-              <a class="secondary-button" href="#projects">View Project</a>
+              <a
+                class="secondary-button"
+                href="#projects"
+                onclick="lenis.scrollTo('#projects');"
+                >View Project</a
+              >
             </div>
           </div>
         </div>
@@ -338,7 +374,13 @@
       <footer class="footer">
         <p class="copyright">Copyright © 2024 All rights reserved</p>
         <p>
-          developed by <a href="#home" class="primary-name">Abdullah Shaker</a>
+          developed by
+          <a
+            href="#home"
+            class="primary-name"
+            onclick="lenis.scrollTo('#home');"
+            >Abdullah Shaker</a
+          >
         </p>
       </footer>
       <!-- END OF FOOTER SECTION -->

@@ -1,5 +1,7 @@
 // Selecting elements from the DOM
 
+const cursorDot = document.querySelector(".cursor-dot");
+const cursorOutline = document.querySelector(".cursor-outline");
 const burgerIcon = document.querySelector("#burger-icon");
 const header = document.querySelector("#header");
 const navContainer = document.querySelector("#nav-container");
@@ -18,6 +20,23 @@ const failure = document.querySelector("#failure");
 const root = document.documentElement;
 const stylesheet = document.styleSheets[0];
 let COUNTER = 1;
+
+// The mouse circle following the mouse function
+window.addEventListener("mousemove", (e) => {
+  const posX = e.clientX;
+  const posY = e.clientY;
+
+  cursorDot.style.left = `${posX}px`;
+  cursorDot.style.top = `${posY}px`;
+
+  cursorOutline.animate(
+    {
+      left: `${posX}px`,
+      top: `${posY}px`,
+    },
+    { duration: 100, fill: "forwards" }
+  );
+});
 
 // Toggling classes on click of the burger icon to show/hide the navigation menu
 burgerIcon.addEventListener("click", () => {
@@ -192,7 +211,7 @@ if (window.innerWidth < 1000) {
 // A Typing effect for my job
 
 const typed = new Typed(".multiple-text", {
-  strings: ["Front-end Developer", "UI/UX Designer"],
+  strings: ["Front-end Developer ", "UI/UX Designer "],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
@@ -241,3 +260,5 @@ entries.forEach((entry) => {
     "<"
   );
 });
+
+// The following mouse circle animation
